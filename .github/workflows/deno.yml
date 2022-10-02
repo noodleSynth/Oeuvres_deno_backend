@@ -58,5 +58,5 @@ jobs:
         - name: Upload to Deno Deploy
           uses: denoland/deployctl@v1
           with:
-            project: "oeuvres-deno-backend"
-            entrypoint: "../mod.ts" # TODO: update entrypoint
+            project: "."
+            entrypoint: "./mod.ts" # TODO: update entrypoint
