@@ -60,4 +60,4 @@ jobs:
           with:
             project: "."
             entrypoint: "./mod.ts" # TODO: update entrypoint
-            root: dist
+            root: "."
