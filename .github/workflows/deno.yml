@@ -59,4 +59,4 @@ jobs:
           uses: denoland/deployctl@v1
           with:
             project: "oeuvres-deno-backend"
-            entrypoint: "mod.ts" # TODO: update entrypoint
+            entrypoint: "../mod.ts" # TODO: update entrypoint
