@@ -40,7 +40,8 @@ jobs:
 
 #       - name: Run tests
 #         run: deno test -A --unstable
-        
+  
+  
   publish:
         runs-on: ubuntu-latest
         permissions:
@@ -49,6 +50,16 @@ jobs:
         steps:
         - name: Setup repo
           uses: actions/checkout@v3
+          
+        - name: Setup Pages
+          uses: actions/configure-pages@v2
+        - name: Build with Jekyll
+          uses: actions/jekyll-build-pages@v1
+          with:
+            source: ./
+            destination: ./_site
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v1
 
         - name: Setup Deno
           # uses: denoland/setup-deno@v1
